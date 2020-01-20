@@ -38,7 +38,7 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/dashboard/dashboard'
   },
-  { path: '/login', component: () => import('@/views/login'), name: '登录NxAdmin', hidden: true },
+  { path: '/login', component: () => import('@/views/login'), name: '登录', hidden: true },
   { path: '/404', component: () => import('@/views/errorPage/404'), hidden: true },
   { path: '/401', component: () => import('@/views/errorPage/401'), hidden: true },
   // 锁屏
@@ -587,16 +587,16 @@ export const asyncRouterMap = [
     name: '系统管理',
     alwaysShow: true, // will always show the root menu
     meta: {
-      title: 'system',
+      title: '系统管理',
       icon: 'table',
       roles: ['admin'] // you can set roles in root nav
     },
     children: [{
       path: 'page',
       component: () => import('@/views/system/page'),
-      name: 'pagePermission',
+      name: '人员管理',
       meta: {
-        title: 'systemUser',
+        title: '人员管理',
         roles: ['admin'] // or you can only set roles in sub nav
       }
     }]
